@@ -6,7 +6,7 @@ before_install:
   - docker-compose up --build -d
 
 script:
-  - docker run multi-docker/react-test npm run test
+  - docker run visits-node npm run test
 
 # deploy:
 #   provider: heroku
