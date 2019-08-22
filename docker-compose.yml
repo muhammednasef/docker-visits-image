@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  redis-server:
+    container_name: visits-redis
+    image: 'redis'
+
+  node-app:
+    container_name: visits-node
+    restart: "always"
+    build: .
+    ports:
+      - "4040:8080"
